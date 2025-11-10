@@ -27,7 +27,8 @@
     "prettier-plugin-curly": "0.4.0",
     "prettier-plugin-tailwindcss": "0.7.1",
     "tailwindcss": "^4.1.17",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.3"
   },
   "packageManager": "pnpm@10.21.0"
 }
