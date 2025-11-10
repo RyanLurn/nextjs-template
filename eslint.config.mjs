@@ -17,6 +17,12 @@ export default defineConfig([
   js.configs.recommended,
   tsConfigs.recommendedTypeChecked,
   {
+    rules: {
+      "@typescript-eslint/no-import-type-side-effects": "error",
+      "@typescript-eslint/consistent-type-imports": "error",
+    },
+  },
+  {
     languageOptions: {
       globals: {
         ...globals.browser,
