@@ -8,7 +8,9 @@
     "start": "next start",
     "format": "prettier . --write --cache",
     "lint": "eslint --cache",
-    "lint:fix": "eslint --cache --fix"
+    "lint:fix": "eslint --cache --fix",
+    "type:gen": "next typegen",
+    "type:check": "pnpm run type:gen && tsc --noEmit"
   },
   "dependencies": {
     "next": "16.0.1",
