@@ -7,10 +7,13 @@
     "build": "next build",
     "start": "next start",
     "format": "prettier . --write --cache",
+    "format:check": "prettier . --check --cache",
     "lint": "eslint --cache",
     "lint:fix": "eslint --cache --fix",
     "type:gen": "next typegen",
-    "type:check": "pnpm run type:gen && tsc --noEmit"
+    "type:check": "pnpm run type:gen && tsc --noEmit",
+    "check": "turbo run type:check lint format:check",
+    "fix": "turbo run lint:fix format"
   },
   "dependencies": {
     "next": "16.0.1",
@@ -40,6 +43,7 @@
     "prettier-plugin-curly": "0.4.0",
     "prettier-plugin-tailwindcss": "0.7.1",
     "tailwindcss": "^4.1.17",
+    "turbo": "^2.6.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.3"
   },

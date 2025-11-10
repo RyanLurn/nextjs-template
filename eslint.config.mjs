@@ -13,7 +13,7 @@ import globals from "globals";
 import js from "@eslint/js";
 
 export default defineConfig([
-  globalIgnores([".next/", "out/", "build/", "next-env.d.ts"]),
+  globalIgnores([".next/", "out/", "build/", ".turbo/", "next-env.d.ts"]),
   js.configs.recommended,
   tsConfigs.recommendedTypeChecked,
   {
