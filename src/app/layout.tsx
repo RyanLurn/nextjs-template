@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+
+import { Geist_Mono, Geist } from "next/font/google";
+
 import "@/app/globals.css";
 
 const geistSans = Geist({
@@ -13,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Template",
   description: "An opinionated starter template for Next.js",
+  title: "Next.js Template",
 };
 
 export default function RootLayout({

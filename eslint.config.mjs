@@ -1,8 +1,9 @@
 // @ts-check
 
-import { defineConfig, globalIgnores } from "eslint/config";
-import js from "@eslint/js";
+import { globalIgnores, defineConfig } from "eslint/config";
+import perfectionist from "eslint-plugin-perfectionist";
 import ts from "typescript-eslint";
+import js from "@eslint/js";
 
 export default defineConfig([
   globalIgnores([".next/", "out/", "build/", "next-env.d.ts"]),
@@ -15,4 +16,5 @@ export default defineConfig([
       },
     },
   },
+  perfectionist.configs["recommended-line-length"],
 ]);
