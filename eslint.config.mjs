@@ -1,14 +1,15 @@
 // @ts-check
 
 import { globalIgnores, defineConfig } from "eslint/config";
+import { configs as tsConfigs } from "typescript-eslint";
 import perfectionist from "eslint-plugin-perfectionist";
-import ts from "typescript-eslint";
+import { importX } from "eslint-plugin-import-x";
 import js from "@eslint/js";
 
 export default defineConfig([
   globalIgnores([".next/", "out/", "build/", "next-env.d.ts"]),
   js.configs.recommended,
-  ts.configs.recommendedTypeChecked,
+  tsConfigs.recommendedTypeChecked,
   {
     languageOptions: {
       parserOptions: {
@@ -17,4 +18,11 @@ export default defineConfig([
     },
   },
   perfectionist.configs["recommended-line-length"],
+  {
+    plugins: {
+      // @ts-expect-error ignore type incompatibility
+      "import-x": importX,
+    },
+    extends: ["import-x/flat/recommended", "import-x/flat/typescript"],
+  },
 ]);
