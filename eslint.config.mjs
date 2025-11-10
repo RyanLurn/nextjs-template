@@ -9,6 +9,7 @@ import { importX } from "eslint-plugin-import-x";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 import next from "@next/eslint-plugin-next";
 import unicorn from "eslint-plugin-unicorn";
+import globals from "globals";
 import js from "@eslint/js";
 
 export default defineConfig([
@@ -17,6 +18,10 @@ export default defineConfig([
   tsConfigs.recommendedTypeChecked,
   {
     languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
       parserOptions: {
         projectService: true,
       },
