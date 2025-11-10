@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier . --write --cache"
   },
   "dependencies": {
     "next": "16.0.1",
@@ -18,6 +19,7 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "babel-plugin-react-compiler": "1.0.0",
+    "prettier": "3.6.2",
     "tailwindcss": "^4.1.17",
     "typescript": "^5.9.3"
   },
