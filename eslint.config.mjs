@@ -7,6 +7,7 @@ import prettier from "eslint-config-prettier/flat";
 import reactHooks from "eslint-plugin-react-hooks";
 import { importX } from "eslint-plugin-import-x";
 import jsxA11y from "eslint-plugin-jsx-a11y";
+import next from "@next/eslint-plugin-next";
 import unicorn from "eslint-plugin-unicorn";
 import js from "@eslint/js";
 
@@ -32,5 +33,9 @@ export default defineConfig([
   unicorn.configs.recommended,
   reactHooks.configs.flat.recommended,
   jsxA11y.flatConfigs.recommended,
+  // eslint-disable-next-line import-x/no-named-as-default-member
+  next.configs.recommended,
+  // eslint-disable-next-line import-x/no-named-as-default-member
+  next.configs["core-web-vitals"],
   prettier,
 ]);
