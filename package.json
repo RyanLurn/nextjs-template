@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier . --write --cache"
+    "format": "prettier . --write --cache",
+    "lint": "eslint --cache",
+    "lint:fix": "eslint --cache --fix"
   },
   "dependencies": {
     "next": "16.0.1",
@@ -14,11 +16,13 @@
     "react-dom": "19.2.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24.10.0",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "babel-plugin-react-compiler": "1.0.0",
+    "eslint": "^9.39.1",
     "prettier": "3.6.2",
     "prettier-plugin-curly": "0.4.0",
     "prettier-plugin-tailwindcss": "0.7.1",
